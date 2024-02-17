@@ -80,7 +80,7 @@ jobs:
       - name: Create new branch with directory checkout
         run: |
           # Create the new branch based on a specific directory
-          git checkout -b gh-pages main:dist/
+          git checkout -b gh-pages main
           
           # List the content of the newly created branch
           git ls-tree -r HEAD
