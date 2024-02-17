@@ -4,18 +4,17 @@ export default defineNuxtConfig({
   target: "static",
   app: {
     head: {
-      title: 'Nuxt3 x GitHub Pages',
+      title: 'Nuxt 3 x GitHub Pages',
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { hid: 'description', name: 'description', content: 'Dario Tecchia\' personal website!' },
+        { hid: 'description', name: 'description', content: 'Teogor\' personal website!' },
         { name: 'format-detection', content: 'telephone=no' }
       ],
       link: [
         { rel: 'icon', type: 'image/svg', href: '/favicon.svg' }
       ]
     },
-    baseURL: '/nuxt3-ghpages/'
   },
   modules: [
   ],
