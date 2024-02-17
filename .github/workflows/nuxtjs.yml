@@ -78,6 +78,9 @@ jobs:
           path: ./dist
       - uses: actions/checkout@v3
       - uses: actions-toolkit/create-branch@v1
+      - name: List directory content
+        run: |
+          ls -R /
       - name: Create new branch based on directory
         uses: actions-toolkit/create-branch@v1
         with:
