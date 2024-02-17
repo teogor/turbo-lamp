@@ -72,6 +72,18 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist
+      - name: Checkout target branch
+        uses: actions/checkout@v4
+        with:
+          ref: "your-desired-branch-name"
+      - name: Copy artifacts to branch
+        run: |
+          cp -R ./dist/* .
+      - name: Commit and push changes
+        run: |
+          git add .
+          git commit -m "Publish content from workflow run ${{ github.run_id }}"
+          git push origin "your-desired-branch-name"
 
   # Deployment job
   deploy:
@@ -85,26 +97,3 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
 
-  # New job to publish to another branch
-  publish-to-branch:
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-      - name: Download artifact
-        uses: actions/download-pages-artifact@v3
-        with:
-          name: ${{ steps.build.outputs.artifact_name }}
-      - name: Checkout target branch
-        uses: actions/checkout@v4
-        with:
-          ref: "your-desired-branch-name"
-      - name: Copy artifacts to branch
-        run: |
-          cp -R ./dist/* .
-      - name: Commit and push changes
-        run: |
-          git add .
-          git commit -m "Publish content from workflow run ${{ github.run_id }}"
-          git push origin "your-desired-branch-name"
