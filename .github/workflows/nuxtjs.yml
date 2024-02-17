@@ -94,7 +94,7 @@ jobs:
           git commit -m "Added new content from directory"
 
           # Push the changes to the remote repository
-          git push origin my-new-branch
+          git push origin gh-pages
       - name: List directory content
         run: |
           ls -R /
