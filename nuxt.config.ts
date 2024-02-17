@@ -28,7 +28,6 @@ export default defineNuxtConfig({
           sizes: icon.sizes ? icon.sizes : undefined,
           href: baseUrlDef + icon.href,
         })),
-        // Add your new link objects here:
         { rel: 'stylesheet', href: 'https://your-stylesheet.css' },
       ],
     },
