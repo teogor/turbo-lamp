@@ -14,13 +14,11 @@ export default defineNuxtConfig({
   target: "static",
   app: {
     head: {
-      // title: 'Nuxt 3 x GitHub Pages',
-      // meta: [
-      //   { charset: 'utf-8' },
-      //   { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      //   { hid: 'description', name: 'description', content: 'Teogor\' personal website!' },
-      //   { name: 'format-detection', content: 'telephone=no' }
-      // ],
+      meta: [
+        { charset: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        { name: 'format-detection', content: 'telephone=no' }
+      ],
       link: [
         ...icons.map(icon => ({
           rel: icon.rel,
