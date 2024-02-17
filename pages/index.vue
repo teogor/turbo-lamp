@@ -4,14 +4,12 @@
   </div>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      pageTitle: 'My Index Page Title',
-      keywords: 'nuxt, seo, meta tags',
-      description: 'This is my homepage description.',
-    };
-  },
-};
+<script setup lang="ts">
+useHead({
+  title: 'About ZeoOwl',
+  meta: [
+    {hid: 'description', name: 'description', content: 'This is a description of the About ZeoOwl page.'},
+    {hid: 'keywords', name: 'keywords', content: 'ZeoOwl, about, company, products, services'},
+  ],
+})
 </script>
