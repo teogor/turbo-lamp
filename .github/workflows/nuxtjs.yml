@@ -76,7 +76,6 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist
-      - uses: actions/checkout@v3
       - name: Create new branch with directory checkout
         run: |
           # Create the new branch based on a specific directory
