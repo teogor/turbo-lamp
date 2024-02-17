@@ -30,6 +30,7 @@ export default defineNuxtConfig({
         { rel: 'stylesheet', href: 'https://your-stylesheet.css' },
       ],
     },
+    baseURL: 'https://teogor.dev/turbo-lamp/'
   },
   modules: [
   ],
