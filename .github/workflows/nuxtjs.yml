@@ -84,6 +84,17 @@ jobs:
           
           # List the content of the newly created branch
           git ls-tree -r HEAD
+          
+          # Add or modify files in the new branch as needed
+
+          # Stage the changes
+          git add .
+
+          # Commit the changes with a message
+          git commit -m "Added new content from directory"
+
+          # Push the changes to the remote repository
+          git push origin my-new-branch
       - name: List directory content
         run: |
           ls -R /
