@@ -6,7 +6,6 @@ const icons = [
   { rel: 'manifest', href: '/site.webmanifest' },
 ];
 
-
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   ssr: true,
@@ -25,9 +24,7 @@ export default defineNuxtConfig({
         type: icon.type,
         sizes: icon.sizes ? icon.sizes : undefined,
         href: icon.href,
-      })) + [
-        { rel: 'icon', type: 'image/svg', href: '/favicon.ico' }
-      ],
+      })),
     },
   },
   modules: [
