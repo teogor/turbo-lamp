@@ -81,13 +81,10 @@ jobs:
       - name: List directory content
         run: |
           ls -R /
-      - name: Create new branch based on directory
-        uses: actions-toolkit/create-branch@v1
-        with:
-          branch-name: gh-pages  # Customize branch name
-          from: main              # Replace with base branch if needed
-          files: |               # Specify directory
-            dist/*
+      - name: Create new branch and move directory
+        run: |
+          git checkout -b my-new-branch
+          git mv directory-path new-branch-directory-path
 
   # Deployment job
   deploy:
