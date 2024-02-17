@@ -19,12 +19,16 @@ export default defineNuxtConfig({
         { hid: 'description', name: 'description', content: 'Teogor\' personal website!' },
         { name: 'format-detection', content: 'telephone=no' }
       ],
-      link: icons.map(icon => ({
-        rel: icon.rel,
-        type: icon.type,
-        sizes: icon.sizes ? icon.sizes : undefined,
-        href: icon.href,
-      })),
+      link: [
+        ...icons.map(icon => ({
+          rel: icon.rel,
+          type: icon.type,
+          sizes: icon.sizes ? icon.sizes : undefined,
+          href: icon.href,
+        })),
+        // Add your new link objects here:
+        { rel: 'stylesheet', href: 'https://your-stylesheet.css' },
+      ],
     },
   },
   modules: [
