@@ -77,7 +77,13 @@ jobs:
         with:
           path: ./dist
       - uses: actions/checkout@v3
-      - uses: actions-toolkit/create-branch@v1
+      - name: Create new branch with directory checkout
+        run: |
+          # Create the new branch based on a specific directory
+          git checkout -b gh-pages main:dist/
+          
+          # List the content of the newly created branch
+          git ls-tree -r HEAD
       - name: List directory content
         run: |
           ls -R /
