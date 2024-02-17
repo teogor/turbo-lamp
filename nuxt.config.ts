@@ -1,6 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   ssr: false,
+  target: "static",
   app: {
     head: {
       title: 'Nuxt3 x GitHub Pages',
