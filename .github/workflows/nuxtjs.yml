@@ -76,6 +76,10 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist
+      - uses: actions/checkout@v3
+      - name: Create new branch
+        run: |
+          git checkout -b gh-pages
 
   # Deployment job
   deploy:
@@ -88,7 +92,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-      - uses: actions/checkout@v3
-      - name: Create new branch
-        run: |
-          git checkout -b my-new-branch
