@@ -80,8 +80,9 @@ jobs:
         run: |
           # Create the new branch based on a specific directory
           git checkout -b gh-pages main
-          
-          # Add or modify files in the new branch as needed
+
+          git config user.email "open-source@teogor.dev"
+          git config user.name "Teodor Grigor"
 
           # Stage the changes
           git add ./dist -f
