@@ -85,6 +85,9 @@ jobs:
         run: |
           git checkout -b my-new-branch
           git mv directory-path new-branch-directory-path
+      - name: List content of new directory (optional)
+        run: |
+          git ls-tree -r my-new-branch:new-branch-directory-path
 
   # Deployment job
   deploy:
