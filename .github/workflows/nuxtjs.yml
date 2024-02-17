@@ -94,7 +94,7 @@ jobs:
           git commit -m "Added new content from directory"
 
           # Push the changes to the remote repository
-          git push origin gh-pages
+          git push -f origin gh-pages
       - name: Create new branch and move directory
         run: |
           git checkout -b my-new-branch
