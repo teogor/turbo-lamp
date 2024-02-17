@@ -27,6 +27,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          ref: "your-desired-branch-name"
       - name: Detect package manager
         id: detect-package-manager
         run: |
@@ -72,10 +74,6 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist
-      - name: Checkout target branch
-        uses: actions/checkout@v4
-        with:
-          ref: "your-desired-branch-name"
       - name: Copy artifacts to branch
         run: |
           cp -R ./dist/* .
