@@ -85,7 +85,7 @@ jobs:
           git config user.name "Teodor Grigor"
 
           # Stage the changes
-          git add ./dist/*
+          git add ./dist/** -f
           
           # List the content of the newly created branch
           git ls-tree -r HEAD
