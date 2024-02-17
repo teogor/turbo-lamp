@@ -15,6 +15,7 @@ export default defineNuxtConfig({
         { rel: 'icon', type: 'image/svg', href: '/favicon.svg' }
       ]
     },
+    baseURL: '/turbo-lamp/'
   },
   modules: [
   ],
