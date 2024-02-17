@@ -82,13 +82,13 @@ jobs:
           # Create the new branch based on a specific directory
           git checkout -b gh-pages main
           
-          # List the content of the newly created branch
-          git ls-tree -r HEAD
-          
           # Add or modify files in the new branch as needed
 
           # Stage the changes
-          git add .
+          git add dist/
+          
+          # List the content of the newly created branch
+          git ls-tree dist/ -r HEAD
 
           # Commit the changes with a message
           git commit -m "Added new content from directory"
