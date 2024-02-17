@@ -1,5 +1,7 @@
+const baseUrlDef = '/turbo-lamp'
+
 const icons = [
-  { rel: 'icon', type: 'image/x-icon', href: '${baseURL}/favicon.ico' },
+  { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
   { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' },
   { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' },
   { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
@@ -24,13 +26,13 @@ export default defineNuxtConfig({
           rel: icon.rel,
           type: icon.type,
           sizes: icon.sizes ? icon.sizes : undefined,
-          href: icon.href,
+          href: baseUrlDef + icon.href,
         })),
         // Add your new link objects here:
         { rel: 'stylesheet', href: 'https://your-stylesheet.css' },
       ],
     },
-    baseURL: '/turbo-lamp/'
+    baseURL: baseUrlDef
   },
   modules: [
   ],
