@@ -6,7 +6,8 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "deploy": "nuxt generate"
+    "deploy": "nuxt generate",
+    "start": "nuxt start",
   },
   "devDependencies": {
     "nuxt": "^3.1.2",
