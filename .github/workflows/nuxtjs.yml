@@ -76,32 +76,25 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist
-      - name: Create new branch with directory checkout
-        run: |
-          # Create the new branch based on a specific directory
-          git checkout -b gh-pages main
-          
-          git config user.email "open-source@teogor.dev"
-          git config user.name "Teodor Grigor"
-
-          # Stage the changes
-          git add ./dist/** -f
-          
-          # List the content of the newly created branch
-          git ls-tree -r HEAD
-
-          # Commit the changes with a message
-          git commit -m "Added new content from directory"
-
-          # Push the changes to the remote repository
-          git push -f origin gh-pages
-      - name: Create new branch and move directory
-        run: |
-          git checkout -b my-new-branch
-          git mv directory-path new-branch-directory-path
-      - name: List content of new directory (optional)
-        run: |
-          git ls-tree -r my-new-branch:new-branch-directory-path
+#      - name: Create new branch with directory checkout
+#        run: |
+#          # Create the new branch based on a specific directory
+#          git checkout -b gh-pages main
+#
+#          git config user.email "open-source@teogor.dev"
+#          git config user.name "Teodor Grigor"
+#
+#          # Stage the changes
+#          git add ./dist/** -f
+#
+#          # List the content of the newly created branch
+#          git ls-tree -r HEAD
+#
+#          # Commit the changes with a message
+#          git commit -m "Added new content from directory"
+#
+#          # Push the changes to the remote repository
+#          git push -f origin gh-pages
 
   # Deployment job
   deploy:
