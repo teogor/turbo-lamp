@@ -2,7 +2,7 @@
 #
 # To get started with Nuxt see: https://nuxtjs.org/docs/get-started/installation
 #
-name: Deploy Pages
+name: Nuxt x GitHub Pages
 
 on:
   # Allows you to run this workflow manually from the Actions tab
